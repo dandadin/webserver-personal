@@ -1,2 +1,2 @@
 <?php
-    if ($_GET["heslo"] == "1189") include "deca.html";
+    if ($_POST["heslo"] == "1189") include "deca.html";
