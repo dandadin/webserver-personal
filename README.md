@@ -29,8 +29,11 @@ docker-comose up -d
 docker-comose down
 cd ..
 
-docker-compose up
+docker-compose up -d
 
+chmod +x startup-script.sh
+crontab -e
+<pridat nasledujici: "@reboot sleep 5 & /root/deca/startup-script.sh">
 ```
 
 TODO:
