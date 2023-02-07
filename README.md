@@ -23,4 +23,16 @@ git clone https://github.com/dandadin/deca.git
 git config --global user.name "Dan Simanek"
 git config --global user.email "dan.simanek@seznam.cz"
 git config --global push.default simple
+
+cd init/
+docker-comose up -d
+docker-comose down
+cd ..
+
+docker-compose up
+
 ```
+
+TODO:
+- cron na renew
+- autostart na nginx pri startu pc
