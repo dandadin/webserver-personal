@@ -4,10 +4,12 @@ services:
   nginx:
     image: nginx:1.23.3
     volumes:
-      - ./html:/var/www/html/
-      - ./conf:/etc/nginx/conf.d
+      - ./html:/var/www/html/:ro
+      - ./conf:/etc/nginx/conf.d:ro
+      - /run/certificates:/etc/nginx/ssl
     ports:
       - 80:80
+      - 443:443
     networks:
       - internal
   php:
@@ -16,6 +18,11 @@ services:
       - internal
     volumes:
       - ./html:/var/www/html/
+#  certbot:
+#    image: certbot/certbot:latest
+#    volumes:
+#      - ./html:/var/www/certbot/:rw
+#      - ./certbot/conf/:/etc/letsencrypt/:rw
 networks:
   internal:
     driver: bridge
