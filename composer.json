@@ -1,6 +1,6 @@
 {
-    "name": "dandadin/deca-sites",
+    "name": "dandadin/webserver-personal",
     "version": "v1.0.0",
-    "description": "Decathlon themed subsites for dandadin.eu website.",
+    "description": "Personal subsites for dandadin.eu website.",
     "type": "library"
 }
